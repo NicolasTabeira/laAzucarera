@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgba(235, 186, 219, 0.63);
+    background-image: url(../images/iconoPestañafondo.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navBar {
+    border-bottom: 10px double rgb(255, 162, 224);
+}
+
+nav.navbar {
+    background-color: rgb(255, 192, 240);
+}
+.collapse {
+    justify-content: end;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 0.25fr, 1.75fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+
+}
+
+.carrusel {
+    display: inline-block;
+    flex-direction: row;
+    width: 1500px;
+    justify-content: center;
+}
+
+.info {
+    display: grid;
+    grid-row: 2/3;
+    justify-content: center;
+
+}
+
+.carousel-inner {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+
+
