@@ -18,7 +18,10 @@ body {
 }
 
 nav.navbar {
+    background-image: url(../images/fondoNav.png);
     background-color: rgb(255, 192, 240);
+    background-position: top;
+    background-size: 65%;
 }
 .collapse {
     justify-content: end;
@@ -27,22 +30,24 @@ nav.navbar {
 .container {
     display: grid;
     grid-template-rows: 0.25fr, 1.75fr;
-    grid-template-columns: 1fr;
     justify-content: center;
-
 }
 
 .carrusel {
     display: inline-block;
     flex-direction: row;
-    width: 1500px;
+    width: auto;
     justify-content: center;
+    margin-top: 2%;
 }
 
 .info {
     display: grid;
     grid-row: 2/3;
-    justify-content: center;
+}
+.info h2 {
+    text-align: center;
+    margin: 2%;
 
 }
 
@@ -57,8 +62,18 @@ nav.navbar {
     grid-template-rows: 1fr, 1fr, 1fr;
     justify-content: center;
     justify-content: space-around;
+    margin: 2%, auto;
     /* justify-content: space-evenly; */
 
+}
+.card {
+    background-color: rgb(255, 192, 240);
+    width: auto;
+    height: auto;
+}
+.btn {
+    background-color: rgb(255, 162, 224);
+    border-color: rgb(222, 134, 153);
 }
 .card1 {
     display: grid;
