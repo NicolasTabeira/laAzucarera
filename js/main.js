@@ -16,9 +16,6 @@ formPedido.addEventListener('submit', (e) => {
     }
 
     compra.push(pedido);
-
     console.log(compra);
-    let compra = compra.coment;
-    alert (compra.value);
     
 })
