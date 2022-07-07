@@ -85,10 +85,15 @@ h1 {
     background-color: rgb(255, 192, 240);
     width: auto;
     height: auto;
+    padding: 2%;
 }
 .btn {
     background-color: rgb(255, 162, 224);
     border-color: rgb(222, 134, 153);
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
 }
 .card1 {
     display: grid;
@@ -156,4 +161,17 @@ h1 {
 .ig img {
     width: 75px;
     height: 75px;
+}
+.formulario {
+    background-color: rgba(255, 192, 240, 0.63);
+    display: flex;
+    margin: 2% auto;
+    padding: 1%;
+    border: 10px double rgb(255, 162, 224);
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+#formularioPedidos {
+    width: 100%;
 }
