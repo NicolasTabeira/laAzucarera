@@ -25,6 +25,13 @@ nav.navbar {
 }
 .collapse {
     justify-content: end;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: x-large;
+}
+h1 {
+    font-family: 'Alfa Slab One', cursive;
+    color: darkred;
+    justify-content:start;
 }
 
 .container {
@@ -40,6 +47,11 @@ nav.navbar {
     justify-content: center;
     margin-top: 2%;
 }
+.carousel-inner {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
 
 .info {
     display: grid;
@@ -48,14 +60,19 @@ nav.navbar {
 .info h2 {
     text-align: center;
     margin: 2%;
-
+    font-family: 'Great Vibes', cursive;
+    font-size: 100px;
+}
+.presentacion {
+    background-color: rgba(255, 192, 240, 0.63);
+    margin: 2%;
+    border: 10px double rgb(255, 162, 224);
+    text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: larger;
+    color: darkred;
 }
 
-.carousel-inner {
-    width: 100%;
-    height: auto;
-    justify-content: center;
-}
 .galeria {
     display: grid;
     grid-template-columns: 1fr, 1fr, 1fr;
@@ -63,8 +80,6 @@ nav.navbar {
     justify-content: center;
     justify-content: space-around;
     margin: 2%, auto;
-    /* justify-content: space-evenly; */
-
 }
 .card {
     background-color: rgb(255, 192, 240);
@@ -129,4 +144,16 @@ nav.navbar {
     grid-column: 3/4;
     margin: 2%;
 }
-
+.ig {
+    display: flex;
+    position: sticky;
+    bottom: 20px;
+    margin-right: 1%;
+    justify-content: end;
+    height: auto;
+    width: auto;
+}
+.ig img {
+    width: 75px;
+    height: 75px;
+}
