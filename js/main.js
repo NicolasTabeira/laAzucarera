@@ -33,7 +33,7 @@ let totalCard = 0;
 
 
 loadEventsListener();
-revisarCarrito();
+revisarCarrito()
 function revisarCarrito(){
     if (localStorage.getItem('item')=== null) {
         carrito = [];
