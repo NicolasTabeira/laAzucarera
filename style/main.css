@@ -15,6 +15,7 @@ body {
 
 .navBar {
     border-bottom: 10px double rgb(255, 162, 224);
+    box-shadow: 0 15px 20px -3px grey;
 }
 
 nav.navbar {
@@ -86,6 +87,7 @@ h1 {
     width: auto;
     height: auto;
     padding: 2%;
+    box-shadow: 0 15px 20px -3px grey;
 }
 .btn {
     background-color: rgb(255, 162, 224);
@@ -149,6 +151,17 @@ h1 {
     grid-column: 3/4;
     margin: 2%;
 }
+.footer {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    bottom: 20px;
+    margin: 1% ;
+
+    justify-content: space-between;
+    height: auto;
+    width: auto;
+}
 .ig {
     display: flex;
     position: sticky;
@@ -157,8 +170,23 @@ h1 {
     justify-content: end;
     height: auto;
     width: auto;
+    
 }
 .ig img {
+    width: 75px;
+    height: 75px;
+    
+}
+.carrito {
+    display: flex;
+    position: sticky;
+    bottom: 20px;
+    margin-left: 1%;
+    justify-content: start;
+    height: auto;
+    width: auto;
+}
+.carrito img {
     width: 75px;
     height: 75px;
 }
@@ -172,6 +200,7 @@ h1 {
     align-items: center;
     justify-content: center;
 }
-#formularioPedidos {
+
+/* #formularioPedidos {
     width: 100%;
-}
+} */
