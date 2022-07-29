@@ -97,6 +97,12 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+.btn:active {
+    background-color: red;
+}
+.btn:hover {
+    background-color: pink;
+}
 .card1 {
     display: grid;
     grid-row: 1/2;
@@ -157,10 +163,10 @@ h1 {
     position: sticky;
     bottom: 20px;
     margin: 1% ;
-
     justify-content: space-between;
     height: auto;
     width: auto;
+    
 }
 .ig {
     display: flex;

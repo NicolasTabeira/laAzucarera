@@ -1,0 +1,65 @@
+[
+    {
+        "nombre": "Galletas",
+        "imagen": "../images/galletasCard.jpeg",
+        "descripcion": "Las artesanales galletas mas ricas.",
+        "precio": "60",
+        "id": "1"
+    },
+    {
+        "nombre": "Box",
+        "imagen": "../images/box1.jpeg",
+        "descripcion": "Podes elegir el que mas te guste o armar el tuyo!",
+        "precio": "1000",
+        "id": "2"
+    },
+    {
+        "nombre": "Alfajorcitos",
+        "imagen": "../images/alfajorcitos.jpeg",
+        "descripcion": "Alfajores de chips artesanales.",
+        "precio": "80",
+        "id": "3"
+    },
+    {
+        "nombre": "Bombones",
+        "imagen": "../images/bombon.jpeg",
+        "descripcion": "Bombones artesanales.",
+        "precio": "40",
+        "id": "4"
+    },
+    {
+        "nombre": "Magdalenas",
+        "imagen": "../images/magdalena.jpeg",
+        "descripcion": "Magdalenas artesanales de distintos sabores.",
+        "precio": "80",
+        "id": "5"
+    },
+    {
+        "nombre": "Macetas",
+        "imagen": "../images/macetita.jpeg",
+        "descripcion": "Macetas personalizadas.",
+        "precio": "600",
+        "id": "6"
+    },
+    {
+        "nombre": "Galletas",
+        "imagen": "../images/scones.jpeg",
+        "descripcion": "Las artesanales galletas mas ricas.",
+        "precio": "60",
+        "id": "7"
+    },
+    {
+        "nombre": "Scones",
+        "imagen": "../images/galletasCard.jpeg",
+        "descripcion": "Scones artesanales dulces y salados..",
+        "precio": "70",
+        "id": "8"
+    },
+    {
+        "nombre": "Tortas",
+        "imagen": "../images/tortaCard.jpeg",
+        "descripcion": "Tortas hechas a pedido del sabor y diseño que quieras.",
+        "precio": "1300",
+        "id": "9"
+    }
+]

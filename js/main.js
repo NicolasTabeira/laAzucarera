@@ -1,39 +1,23 @@
-/* // formulario que no se si usar
-const formPedido = document.getElementById('formularioPedidos');
-
-const compra = [];
-
-formPedido.addEventListener('submit', (e) => {
-    
-    e.preventDefault();
-
-    const email = document.getElementById('email').value;
-    const coment = document.getElementById('coment').value;
-
-    const pedido = {
-
-        email,
-        coment
-    }
-
-    compra.push(pedido);
-    console.log(compra);
-    
-}) */
 //variables
 let galeriaCarrito = document.querySelector('.galeria');
 let containerCarrito = document.querySelector('.cardItems');
 let precioTotal = document.querySelector('.price-total');
 
+
 let carrito = [];
 let totalCard = 0;
+
+
 
 
 //funciones
 
 
 loadEventsListener();
-revisarCarrito()
+revisarCarrito();
+
+
+
 function revisarCarrito(){
     if (localStorage.getItem('item')=== null) {
         carrito = [];
@@ -45,6 +29,7 @@ function loadEventsListener(){
     galeriaCarrito.addEventListener('click', addProduct);
 
     containerCarrito.addEventListener('click', deleteProduct);
+
 }
 function cargarStorage() {
     
@@ -54,12 +39,14 @@ function cargarStorage() {
     })
     
 }
+
+
 function addProduct(e){
     e.preventDefault();
     if (e.target.classList.contains('btn')) {    
         const selectProduct = e.target.parentElement;
         readTheContent(selectProduct);
-    }   
+    }
         
 }
 
@@ -129,12 +116,52 @@ function loadHtml() {
     
 }
 
+
+//para evitar que se vuelva a agregar un producto ya existente en el carrito
 function clearHtml() {
     containerCarrito.innerHTML = '';
 }
+
+//sincronizacion del local storage
 function sincLocalStorage() {
     localStorage.setItem('item', JSON.stringify(carrito))    
 }
 
+//alert de adicion al carrito
+function captarBotones(){
+    let btns = document.querySelectorAll('.btn-toastify');
+    for (const button of btns) {
+        button.addEventListener('click', () => {
+            Toastify({
+                text: 'Se añadio al carrito.',
+                duration: 3000
+            }) .showToast();
+        })
+    }
 
+}
+//fetch para cargar productos en el html
+fetch("../js/productos/productos.json")
+.then((response)=>{
+    return response.json();
+})
+.then((productos)=>{
+    console.log(productos);
+    productos.forEach((producto, indice) => {
+        let card= 
+        `
+        <div class="card card${indice+1}" style="width: 18rem;">
+        <img src="${producto.imagen}" class="card-img-top" alt="...">
+        <div class="card-body item">
+            <h5 class="card-title">${producto.nombre}</h5>
+            <p class="card-text">${producto.descripcion}</p>
+            <p classs="card-text" id="precio">$ <span>${producto.precio}</span></p>
+            <a href="#" class="btn btn-toastify btn-primary" data-id="${producto.id}">Añadir al carrito</a>
+        </div>
+        </div>
+        `;
+        galeriaCarrito.innerHTML+=card;
+    });
+    captarBotones();
+})
 
