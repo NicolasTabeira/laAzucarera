@@ -164,33 +164,11 @@ function captarBotones(){
 
 }
 //fetch para cargar productos en el html
-fetch("../js/productos/productos.json")
-.then((response)=>{
-    return response.json();
-})
-.then((productos)=>{
-    console.log(productos);
-    productos.forEach((producto, indice) => {
-        let card= 
-        `
-        <div class="card card${indice+1}" style="width: 18rem;">
-        <img src="${producto.imagen}" class="card-img-top" alt="...">
-        <div class="card-body item">
-            <h5 class="card-title">${producto.nombre}</h5>
-            <p class="card-text">${producto.descripcion}</p>
-            <p classs="card-text" id="precio">$ <span>${producto.precio}</span></p>
-            <a href="#" class="btn btn-toastify btn-primary" data-id="${producto.id}">Añadir al carrito</a>
-        </div>
-        </div>
-        `;
-        galeriaCarrito.innerHTML+=card;
-    });
-    captarBotones();
-})
 
-/* let obtenerProductos = async () => {
+
+let obtenerProductos = async () => {
     try {
-        let response = await fetch("../js/productos/productos.json");
+        let response = await fetch("../productos.json");
         let data = await response.json();
         mostrarProductos(data);
     }
@@ -218,4 +196,4 @@ let mostrarProductos = (productos) => {
         galeriaCarrito.innerHTML+=card;
     });
     captarBotones();
-} */
+}
