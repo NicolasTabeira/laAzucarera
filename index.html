@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Azucarera</title>
+    <title>Catalogo</title>
     <link rel="icon" href="./images/iconoPestañaEP.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,13 +13,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="./style/main.css">
 </head>
 <body>
     <div class="navBar">
-      <nav class="navbar navbar-expand-lg navbar-light ">
+      <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="./images/iconoPestaña.png" height="80px" width="80 px" alt="La Azucarera"></a>
+          <a class="navbar-brand" href="./index.html"><img src="./images/iconoPestaña.png" height="80px" width="80 px" alt="La Azucarera"></a>
           <h1>La Azucarera.</h1>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,17 +28,22 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html"> <span style="color: darkred;" >Inicio</span></a>
+                <a class="nav-link active" aria-current="page" href="#"><span style="color: darkred;" >
+                  <div class="ig">
+                    <a href="https://www.instagram.com/laazucarera.uy/" target="_blank">
+                      <img src="./images/ig.png" alt="">
+                    </a>
+                  </div></span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./pages/catalogo.html"> <span style="color: darkred;" >Catalogo</span></a>
+                <a class="nav-link active" href="#"><span style="color: darkred;" >
+                  </span></a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </div>
-
 
     <div class="container">
       <div class="carrusel">
@@ -80,7 +86,7 @@
           </button>
         </div>
       </div>
-  
+
       <div class="info">
         <div class="presentacion">
           <h2>Bienvenidos!</h2>
@@ -89,129 +95,38 @@
             Conocenos y hace tu pedido!
           </p>
         </div>
-        <div class="galeria">
-          <div class="card card1" style="width: 18rem;">
-            <img src="./images/box1.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Box</h5>
-              <p class="card-text">Podes elegir el que mas te guste o armar el tuyo!</p>
-              <a href="#" class="btn btn-primary">Ver mas.</a>
-            </div>
-          </div>
-          <div class="card card2" style="width: 18rem;">
-            <img src="./images/galletasCard.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Galletas</h5>
-              <p class="card-text">Las artesanales galletas mas ricas.</p>
-              <a href="#" class="btn btn-primary">Ver mas.</a>
-            </div>
-          </div>
-          <div class="card card3" style="width: 18rem;">
-            <img src="./images/alfajorcitos.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Alfajorcitos</h5>
-              <p class="card-text">Alfajores de chips artesanales.</p>
-              <a href="#" class="btn btn-primary">Ver mas.</a>
-            </div>
-          </div>
-          <div class="card card4" style="width: 18rem;">
-            <img src="./images/bombon.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Bombones</h5>
-              <p class="card-text">Bombones artesanales.</p>
-              <a href="#" class="btn btn-primary">Ver mas.</a>
-            </div>
-          </div>
-          <div class="card card5" style="width: 18rem;">
-            <img src="./images/magdalena.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Magdalenas</h5>
-              <p class="card-text">Magdalenas artesanales de distintos sabores.</p>
-              <a href="#" class="btn btn-primary">Ver mas.</a>
-            </div>
-          </div>
-          <div class="card card6" style="width: 18rem;">
-            <img src="./images/scones.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Scones</h5>
-              <p class="card-text">Scones artesanales dulces y salados.</p>
-              <a href="#" class="btn btn-primary">Ver mas.</a>
-            </div>
-          </div>
-          <div class="card card7" style="width: 18rem;">
-            <img src="./images/tortaCard.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Tortas</h5>
-              <p class="card-text">Tortas hechas a pedido del sabor y diseño que quieras.</p>
-              <a href="#" class="btn btn-primary">Ver mas.</a>
-            </div>
-          </div>
-          <div class="card card8" style="width: 18rem;">
-            <img src="./images/bolsoCard1.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Bolsos</h5>
-              <p class="card-text">Bolsos personalizados.</p>
-              <a href="#" class="btn btn-primary">Ver mas.</a>
-            </div>
-          </div>
-          <div class="card card9" style="width: 18rem;">
-            <img src="./images/macetita.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Macetas</h5>
-              <p class="card-text">Macetas personalizadas.</p>
-              <a href="#" class="btn btn-primary">Ver mas.</a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-    <div class="formulario">
-      <form id="formularioPedidos">
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="email" placeholder="name@example.com">
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-          <textarea class="form-control" id="coment" rows="3"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
-      </form>
+
+    <div class="galeria">
     </div>
     
-    <div class="footer">
-      <div class="ig">
-        <a href="https://www.instagram.com/laazucarera.uy/" target="_blank">
-          <img src="./images/ig.png" alt="">
-        </a>
-      </div>
-      <div class="carrito">
-        <div class="productosCarrito">
-          <p>
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-              <img src="./images/carrito.png" alt="">
-            </button>
-          </p>
-          <div style="min-height: 120px;">
-            <div class="collapse collapse-horizontal" id="collapseWidthExample">
-              <div class="card card-body" style="width: 300px;">
-                <div class="cardItems">
 
-                </div>
-                <h2><span style="color: darkred;">Total: $ <strong class="price-total">0</strong></span></h2>
+    <div class="carrito">
+      <div class="productosCarrito">
+        <p>
+          <button class="btn btn-primary btn-carrito" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+            <img src="./images/carrito.png" alt="">
+          </button>
+        </p>
+        <div style="min-height: 150px;">
+          <div class="collapse collapse-vertical" id="collapseWidthExample">
+            <div class="card card-body" style="width: 200px;">
+              <div class="cardItems">
+
               </div>
+              <h2><span style="color: darkred;">Total: $ <strong class="price-total">0</strong></span></h2>
+              <button class="btn finCompra" type="button" > Finalizar compra.</button>
             </div>
           </div>
-          
-        </div>
+        </div>                      
+      </div>
     </div>
-    </div>
-    
 
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="./js/main.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>

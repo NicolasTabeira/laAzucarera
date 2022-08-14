@@ -2,7 +2,8 @@
 let galeriaCarrito = document.querySelector('.galeria');
 let containerCarrito = document.querySelector('.cardItems');
 let precioTotal = document.querySelector('.price-total');
-
+let finalizarCompra = document.querySelector('.finCompra')
+let carroLleno = document.querySelector('.productosCarrito')
 
 let carrito = [];
 let totalCard = 0;
@@ -19,22 +20,26 @@ revisarCarrito();
 
 
 function revisarCarrito(){
-    if (localStorage.getItem('item')=== null) {
+    if (localStorage.getItem('item') === null) {
         carrito = [];
     }else{
         cargarStorage();
     }
 }
+
+
 function loadEventsListener(){
     galeriaCarrito.addEventListener('click', addProduct);
 
     containerCarrito.addEventListener('click', deleteProduct);
 
+    finalizarCompra.addEventListener('click', terminarCompra)
+
 }
 function cargarStorage() {
-    
     document.addEventListener('DOMContentLoaded', () => {
         carrito = JSON.parse(localStorage.getItem('item'));
+        totalCard = JSON.parse(localStorage.getItem('suma'));
         loadHtml();
     })
     
@@ -47,7 +52,7 @@ function addProduct(e){
         const selectProduct = e.target.parentElement;
         readTheContent(selectProduct);
     }
-        
+    
 }
 
 function deleteProduct(e) {
@@ -56,14 +61,29 @@ function deleteProduct(e) {
 
         carrito.forEach(value => {
             if (value.id == deleteId) {
-                let priceReduce = Number(value.precio) * Number(value.amount);
-                totalCard = totalCard - priceReduce;
+                let priceReduce = Number(value.precio) * Number(value.amount);                
+                if (totalCard > 0) {
+                    totalCard = totalCard - priceReduce;
+                    loadHtml();
+                } else {
+                    totalCard = 0;
+                }
             }
         })
         carrito = carrito.filter(product => product.id !== deleteId);
+
     }
     loadHtml();
 }
+
+function terminarCompra () {
+    carrito = [];
+    localStorage.clear();
+    totalCard = 0;
+    loadHtml();
+}
+
+
 function readTheContent(product){
     const infoProduct = {
         titulo: product.querySelector('.card-title').textContent,
@@ -108,10 +128,12 @@ function loadHtml() {
 
         containerCarrito.appendChild(row);
 
-        precioTotal.innerHTML =  totalCard;
         
-        sincLocalStorage();
+        
     });
+    
+    precioTotal.innerHTML =  totalCard;
+    sincLocalStorage();
     
     
 }
@@ -124,7 +146,8 @@ function clearHtml() {
 
 //sincronizacion del local storage
 function sincLocalStorage() {
-    localStorage.setItem('item', JSON.stringify(carrito))    
+    localStorage.setItem('item', JSON.stringify(carrito));
+    localStorage.setItem('suma', JSON.stringify(totalCard));    
 }
 
 //alert de adicion al carrito
@@ -141,12 +164,21 @@ function captarBotones(){
 
 }
 //fetch para cargar productos en el html
-fetch("../js/productos/productos.json")
-.then((response)=>{
-    return response.json();
-})
-.then((productos)=>{
-    console.log(productos);
+
+let obtenerProductos = async () => {
+    try {
+        let response = await fetch("../js/productos/productos.json");
+        let data = await response.json();
+        mostrarProductos(data);
+    }
+    catch(error) {
+        console.log(error)
+    }
+}
+
+obtenerProductos(); 
+
+let mostrarProductos = (productos) => {
     productos.forEach((producto, indice) => {
         let card= 
         `
@@ -163,5 +195,4 @@ fetch("../js/productos/productos.json")
         galeriaCarrito.innerHTML+=card;
     });
     captarBotones();
-})
-
+}
